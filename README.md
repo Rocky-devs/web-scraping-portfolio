@@ -1,4 +1,3 @@
-# web-scraping-portfolio
 # Web Scraping & Data Portfolio — Rocky
 
 Python developer specializing in web scraping, data cleaning, and analysis.
