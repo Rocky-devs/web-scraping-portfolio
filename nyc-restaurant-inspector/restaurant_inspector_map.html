@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_75e75499616c7304fa5ab05c2b35e031 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+<div style="position:fixed; bottom:30px; left:30px; z-index:1000;
+     background:white; padding:12px 16px; border-radius:8px;
+     box-shadow:0 2px 8px rgba(0,0,0,0.3); font-family:Arial;">
+  <b>NYC Restaurant Health Grade</b><br><br>
+  🟢 Grade A<br>
+  🟠 Grade B<br>
+  🔴 Grade C
+</div>
+    
+            <div class="folium-map" id="map_75e75499616c7304fa5ab05c2b35e031" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_75e75499616c7304fa5ab05c2b35e031 = L.map(
+                "map_75e75499616c7304fa5ab05c2b35e031",
+                {
+                    center: [40.758, -73.9855],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 13,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_aae5674925a8bf9dc56adf2d851847fa = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_aae5674925a8bf9dc56adf2d851847fa.addTo(map_75e75499616c7304fa5ab05c2b35e031);
+        
+    
+            var marker_44bff56e0d6c5ef96a22c587b3bb66aa = L.marker(
+                [40.7626593, -73.9714411],
+                {
+}
+            ).addTo(map_75e75499616c7304fa5ab05c2b35e031);
+        
+    
+            var icon_c41224ac489760764ea98ceacc5a9308 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "cutlery",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_027b2edc235ef88f9cc44ae458a73248 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_810e1a8fd888575a53918b9a8cc8c6d4 = $(`<div id="html_810e1a8fd888575a53918b9a8cc8c6d4" style="width: 100.0%; height: 100.0%;">             <b>Tao Uptown</b><br>             ⭐ Google Rating: 4.2<br>             🏥 Health Grade: <b>A</b><br>             📊 Inspection Score: 12<br>             📍 42 E 58th St, New York, NY 10022, USA         </div>`)[0];
+                popup_027b2edc235ef88f9cc44ae458a73248.setContent(html_810e1a8fd888575a53918b9a8cc8c6d4);
+            
+        
+
+        marker_44bff56e0d6c5ef96a22c587b3bb66aa.bindPopup(popup_027b2edc235ef88f9cc44ae458a73248)
+        ;
+
+        
+    
+    
+                marker_44bff56e0d6c5ef96a22c587b3bb66aa.setIcon(icon_c41224ac489760764ea98ceacc5a9308);
+            
+    
+            var marker_6347a07628d6f5ff46fd6492d8d14312 = L.marker(
+                [40.7618723, -73.98343559999999],
+                {
+}
+            ).addTo(map_75e75499616c7304fa5ab05c2b35e031);
+        
+    
+            var icon_14db3837121bd8182f003f1921999dfe = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "cutlery",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6755248ada971129b7cd300a00d85657 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_d290ba91b732c801f3a26147620f8b9f = $(`<div id="html_d290ba91b732c801f3a26147620f8b9f" style="width: 100.0%; height: 100.0%;">             <b>Ellen'S Stardust Diner</b><br>             ⭐ Google Rating: 4.4<br>             🏥 Health Grade: <b>A</b><br>             📊 Inspection Score: 13<br>             📍 1650 Broadway, New York, NY 10019, USA         </div>`)[0];
+                popup_6755248ada971129b7cd300a00d85657.setContent(html_d290ba91b732c801f3a26147620f8b9f);
+            
+        
+
+        marker_6347a07628d6f5ff46fd6492d8d14312.bindPopup(popup_6755248ada971129b7cd300a00d85657)
+        ;
+
+        
+    
+    
+                marker_6347a07628d6f5ff46fd6492d8d14312.setIcon(icon_14db3837121bd8182f003f1921999dfe);
+            
+    
+            var marker_007133b41cada76d1c083f7a147021cc = L.marker(
+                [40.75521850000001, -73.97871289999999],
+                {
+}
+            ).addTo(map_75e75499616c7304fa5ab05c2b35e031);
+        
+    
+            var icon_5d31ca9bccd05243cc84722b12757291 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "cutlery",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_cf983820c50fee774929f425c7d82295 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_7f75df0759c78ac43a513016060cad4b = $(`<div id="html_7f75df0759c78ac43a513016060cad4b" style="width: 100.0%; height: 100.0%;">             <b>Morton'S The Steakhouse</b><br>             ⭐ Google Rating: 4.5<br>             🏥 Health Grade: <b>A</b><br>             📊 Inspection Score: 12<br>             📍 551 5th Ave, New York, NY 10017, USA         </div>`)[0];
+                popup_cf983820c50fee774929f425c7d82295.setContent(html_7f75df0759c78ac43a513016060cad4b);
+            
+        
+
+        marker_007133b41cada76d1c083f7a147021cc.bindPopup(popup_cf983820c50fee774929f425c7d82295)
+        ;
+
+        
+    
+    
+                marker_007133b41cada76d1c083f7a147021cc.setIcon(icon_5d31ca9bccd05243cc84722b12757291);
+            
+    
+            var marker_44c96fb680f7c7addf6a587c03db9f96 = L.marker(
+                [40.7570352, -73.9866112],
+                {
+}
+            ).addTo(map_75e75499616c7304fa5ab05c2b35e031);
+        
+    
+            var icon_2d03bb3b174433f477e7efd40b5070a2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "cutlery",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_adff981abc173cdcec53bd675a1c0f0e = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_3be2c2f696681b28830dc2e2f31dba5a = $(`<div id="html_3be2c2f696681b28830dc2e2f31dba5a" style="width: 100.0%; height: 100.0%;">             <b>Hard Rock Cafe</b><br>             ⭐ Google Rating: 4.4<br>             🏥 Health Grade: <b>A</b><br>             📊 Inspection Score: 13<br>             📍 1501 Broadway, New York, NY 10036, USA         </div>`)[0];
+                popup_adff981abc173cdcec53bd675a1c0f0e.setContent(html_3be2c2f696681b28830dc2e2f31dba5a);
+            
+        
+
+        marker_44c96fb680f7c7addf6a587c03db9f96.bindPopup(popup_adff981abc173cdcec53bd675a1c0f0e)
+        ;
+
+        
+    
+    
+                marker_44c96fb680f7c7addf6a587c03db9f96.setIcon(icon_2d03bb3b174433f477e7efd40b5070a2);
+            
+    
+            var marker_3d45f937fc15e0ad97d1b728ece1b6ef = L.marker(
+                [40.755631, -73.9874823],
+                {
+}
+            ).addTo(map_75e75499616c7304fa5ab05c2b35e031);
+        
+    
+            var icon_f37693a2d3da2186a67f24abde151a16 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "cutlery",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1ec25616e966655d030177d77ef3d0db = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_3db90893884bd51113ab94e7f1ebb2cb = $(`<div id="html_3db90893884bd51113ab94e7f1ebb2cb" style="width: 100.0%; height: 100.0%;">             <b>Red Lobster</b><br>             ⭐ Google Rating: 4.4<br>             🏥 Health Grade: <b>A</b><br>             📊 Inspection Score: 5<br>             📍 Five Times Square, W 41st St NYC/5, New York, NY 10036, USA         </div>`)[0];
+                popup_1ec25616e966655d030177d77ef3d0db.setContent(html_3db90893884bd51113ab94e7f1ebb2cb);
+            
+        
+
+        marker_3d45f937fc15e0ad97d1b728ece1b6ef.bindPopup(popup_1ec25616e966655d030177d77ef3d0db)
+        ;
+
+        
+    
+    
+                marker_3d45f937fc15e0ad97d1b728ece1b6ef.setIcon(icon_f37693a2d3da2186a67f24abde151a16);
+            
+    
+            var marker_3f2a49c51a4f8a99cc66b315c7ba1d53 = L.marker(
+                [40.7682178, -73.9828988],
+                {
+}
+            ).addTo(map_75e75499616c7304fa5ab05c2b35e031);
+        
+    
+            var icon_d1422e9cd56c87e6033e156f866f8570 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "cutlery",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fe949141347afdb5d531d8820ed7a562 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_cb4e783ad2a4d4a58ceea3f292e8bcb0 = $(`<div id="html_cb4e783ad2a4d4a58ceea3f292e8bcb0" style="width: 100.0%; height: 100.0%;">             <b>Per Se</b><br>             ⭐ Google Rating: 4.5<br>             🏥 Health Grade: <b>A</b><br>             📊 Inspection Score: 12<br>             📍 10 Columbus Cir, New York, NY 10019, USA         </div>`)[0];
+                popup_fe949141347afdb5d531d8820ed7a562.setContent(html_cb4e783ad2a4d4a58ceea3f292e8bcb0);
+            
+        
+
+        marker_3f2a49c51a4f8a99cc66b315c7ba1d53.bindPopup(popup_fe949141347afdb5d531d8820ed7a562)
+        ;
+
+        
+    
+    
+                marker_3f2a49c51a4f8a99cc66b315c7ba1d53.setIcon(icon_d1422e9cd56c87e6033e156f866f8570);
+            
+    
+            var marker_c971f13c02ca1bcc859e93ff34ddb213 = L.marker(
+                [40.7649602, -73.9828785],
+                {
+}
+            ).addTo(map_75e75499616c7304fa5ab05c2b35e031);
+        
+    
+            var icon_dc19a8bd72603a2fad1bbbc234a9b097 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "cutlery",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_bf0b1d2e937ad3295912dbc559b34553 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_7d159f95b5e5e489334359643ce7a749 = $(`<div id="html_7d159f95b5e5e489334359643ce7a749" style="width: 100.0%; height: 100.0%;">             <b>Mcgee'S Pub</b><br>             ⭐ Google Rating: 4.1<br>             🏥 Health Grade: <b>A</b><br>             📊 Inspection Score: 13<br>             📍 240 W 55th St, New York, NY 10019, USA         </div>`)[0];
+                popup_bf0b1d2e937ad3295912dbc559b34553.setContent(html_7d159f95b5e5e489334359643ce7a749);
+            
+        
+
+        marker_c971f13c02ca1bcc859e93ff34ddb213.bindPopup(popup_bf0b1d2e937ad3295912dbc559b34553)
+        ;
+
+        
+    
+    
+                marker_c971f13c02ca1bcc859e93ff34ddb213.setIcon(icon_dc19a8bd72603a2fad1bbbc234a9b097);
+            
+    
+            var marker_aa3f1cea456e53f2404d548d3cabd805 = L.marker(
+                [40.7500752, -73.9837835],
+                {
+}
+            ).addTo(map_75e75499616c7304fa5ab05c2b35e031);
+        
+    
+            var icon_5872b4f110427608b1d8667bda6c2f52 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "cutlery",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1e5b2c25a72ef3e8ba9c0be78931bdaf = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_d9b19a37a09fe8554ed1195d00c4672e = $(`<div id="html_d9b19a37a09fe8554ed1195d00c4672e" style="width: 100.0%; height: 100.0%;">             <b>Ai Fiori</b><br>             ⭐ Google Rating: 4.4<br>             🏥 Health Grade: <b>A</b><br>             📊 Inspection Score: 9<br>             📍 400 5th Ave #2, New York, NY 10018, USA         </div>`)[0];
+                popup_1e5b2c25a72ef3e8ba9c0be78931bdaf.setContent(html_d9b19a37a09fe8554ed1195d00c4672e);
+            
+        
+
+        marker_aa3f1cea456e53f2404d548d3cabd805.bindPopup(popup_1e5b2c25a72ef3e8ba9c0be78931bdaf)
+        ;
+
+        
+    
+    
+                marker_aa3f1cea456e53f2404d548d3cabd805.setIcon(icon_5872b4f110427608b1d8667bda6c2f52);
+            
+    
+            var marker_ae3817b838c031e123bfd341c4b91cb2 = L.marker(
+                [40.7516345, -73.9790926],
+                {
+}
+            ).addTo(map_75e75499616c7304fa5ab05c2b35e031);
+        
+    
+            var icon_a838142b743f0971e6372f6795bd6f85 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "cutlery",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a96e63da16c8cf6f3d925eab160a5bda = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_c09efb5edb9c9dcee82cffc1515fd53a = $(`<div id="html_c09efb5edb9c9dcee82cffc1515fd53a" style="width: 100.0%; height: 100.0%;">             <b>Benjamin Steakhouse</b><br>             ⭐ Google Rating: 4.5<br>             🏥 Health Grade: <b>A</b><br>             📊 Inspection Score: 10<br>             📍 Inside The Chemists' Club Hotel, 52 E 41st St, New York, NY 10017, USA         </div>`)[0];
+                popup_a96e63da16c8cf6f3d925eab160a5bda.setContent(html_c09efb5edb9c9dcee82cffc1515fd53a);
+            
+        
+
+        marker_ae3817b838c031e123bfd341c4b91cb2.bindPopup(popup_a96e63da16c8cf6f3d925eab160a5bda)
+        ;
+
+        
+    
+    
+                marker_ae3817b838c031e123bfd341c4b91cb2.setIcon(icon_a838142b743f0971e6372f6795bd6f85);
+            
+    
+            var marker_035205af09a48ad5172be5764b2b137b = L.marker(
+                [40.7572071, -73.9863737],
+                {
+}
+            ).addTo(map_75e75499616c7304fa5ab05c2b35e031);
+        
+    
+            var icon_e6a3a7dffcf47db0b5066a0aa4180b88 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "cutlery",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_483b546548c6fa78978a8b7445d2afc9 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_40fcc020e00f81f32b68cf3dd35198af = $(`<div id="html_40fcc020e00f81f32b68cf3dd35198af" style="width: 100.0%; height: 100.0%;">             <b>Bubba Gump Shrimp Co.</b><br>             ⭐ Google Rating: 4.3<br>             🏥 Health Grade: <b>A</b><br>             📊 Inspection Score: 11<br>             📍 1501 Broadway, New York, NY 10036, USA         </div>`)[0];
+                popup_483b546548c6fa78978a8b7445d2afc9.setContent(html_40fcc020e00f81f32b68cf3dd35198af);
+            
+        
+
+        marker_035205af09a48ad5172be5764b2b137b.bindPopup(popup_483b546548c6fa78978a8b7445d2afc9)
+        ;
+
+        
+    
+    
+                marker_035205af09a48ad5172be5764b2b137b.setIcon(icon_e6a3a7dffcf47db0b5066a0aa4180b88);
+            
+    
+            var marker_b10065cc71db571c9ca9433bdac9c5c6 = L.marker(
+                [40.7570239, -73.98866260000001],
+                {
+}
+            ).addTo(map_75e75499616c7304fa5ab05c2b35e031);
+        
+    
+            var icon_07370e1f08222a3c841e3b4eaab11fe5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "cutlery",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5c717fb2e67221cb39477077c52585b5 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_77d644b9ec35e515b9e5e9f9de6bfb5a = $(`<div id="html_77d644b9ec35e515b9e5e9f9de6bfb5a" style="width: 100.0%; height: 100.0%;">             <b>Dallas Bbq</b><br>             ⭐ Google Rating: 4.1<br>             🏥 Health Grade: <b>A</b><br>             📊 Inspection Score: 12<br>             📍 241 W 42nd St, New York, NY 10036, USA         </div>`)[0];
+                popup_5c717fb2e67221cb39477077c52585b5.setContent(html_77d644b9ec35e515b9e5e9f9de6bfb5a);
+            
+        
+
+        marker_b10065cc71db571c9ca9433bdac9c5c6.bindPopup(popup_5c717fb2e67221cb39477077c52585b5)
+        ;
+
+        
+    
+    
+                marker_b10065cc71db571c9ca9433bdac9c5c6.setIcon(icon_07370e1f08222a3c841e3b4eaab11fe5);
+            
+</script>
+</html>
